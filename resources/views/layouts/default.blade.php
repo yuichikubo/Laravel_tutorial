@@ -3,7 +3,7 @@
 <html lang="ja">
 <head>
 	<meta charset="utf-8" />
-
+  <title>@yield("title", "home")</title>
 	<!-- bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
@@ -14,7 +14,7 @@
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <a href="/bbc" id="logo">Laravel掲示板</a>        
+        <a href="/" id="logo">LaravelAPP</a>        
         <nav>
           <ul class="nav navbar-nav navbar-right">
             <li>{{ link_to("#", 'HOME')}}</li>
@@ -26,6 +26,7 @@
     </header>
     <div class="container">
       @yield('content')
+      @include('layouts.footer')
     </div>
   </body>
 </html>

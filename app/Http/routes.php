@@ -15,6 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/static_pages', function(){
-    return view('home');
-});
+Route::get('/', 'Static_page@home');
