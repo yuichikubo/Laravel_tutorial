@@ -4,8 +4,8 @@
   </small>
   <nav>
     <ul>
-      <li>{{ link_to("#", 'About')}}</li>
-      <li>{{ link_to("#", 'Contact')}}</li>
+      <li>{{ link_to("/about", 'About')}}</li>
+      <li>{{ link_to("/contact", 'Contact')}}</li>
       <li><a href="https://www.facebook.com/jp.laravel">News</a></li>
     </ul>
   </nav>

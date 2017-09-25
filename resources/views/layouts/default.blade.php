@@ -3,7 +3,7 @@
 <html lang="ja">
 <head>
 	<meta charset="utf-8" />
-  <title>@yield("title", "home")</title>
+  <title>@yield("title", "Home")</title>
 	<!-- bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
@@ -17,8 +17,8 @@
         <a href="/" id="logo">LaravelAPP</a>        
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li>{{ link_to("#", 'HOME')}}</li>
-            <li>{{ link_to("#", 'HELP')}}</li>
+            <li>{{ link_to("/", 'HOME')}}</li>
+            <li>{{ link_to("/help", 'HELP')}}</li>
             <li>{{ link_to("#", 'Log in')}}</li>
           </ul>
         </nav>

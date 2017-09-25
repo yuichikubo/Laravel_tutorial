@@ -85,3 +85,28 @@
 [25-Sep-2017 09:14:27 Asia/Tokyo] PHP   8. Illuminate\Foundation\ProviderRepository->load() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:530
 [25-Sep-2017 09:14:27 Asia/Tokyo] PHP   9. Illuminate\Foundation\ProviderRepository->compileManifest() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:60
 [25-Sep-2017 09:14:27 Asia/Tokyo] PHP  10. Illuminate\Foundation\ProviderRepository->createProvider() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:114
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP Parse error:  syntax error, unexpected 'new' (T_NEW), expecting identifier (T_STRING) in /home/ubuntu/workspace/Laravel_tutorial/app/Http/Controllers/Users.php on line 11
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP Stack trace:
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP   1. {main}() /home/ubuntu/workspace/Laravel_tutorial/public/index.php:0
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP   2. Illuminate\Foundation\Http\Kernel->handle() /home/ubuntu/workspace/Laravel_tutorial/public/index.php:54
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP   3. Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:99
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP   4. Illuminate\Pipeline\Pipeline->then() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:132
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP   5. call_user_func:{/home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:103}() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:103
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP   6. Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:103
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP   7. call_user_func:{/home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php:32}() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php:32
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP   8. Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php:32
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP   9. call_user_func_array:{/home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:136}() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:136
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP  10. Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:136
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP  11. Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php:44
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP  12. call_user_func:{/home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php:52}() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php:52
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP  13. Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php:52
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP  14. Illuminate\Routing\Router->dispatch() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:246
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP  15. Illuminate\Routing\Router->dispatchToRoute() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Routing/Router.php:675
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP  16. Illuminate\Routing\Router->findRoute() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Routing/Router.php:691
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP  17. Illuminate\Routing\Router->substituteBindings() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Routing/Router.php:825
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP  18. Illuminate\Routing\Router->substituteImplicitBindings() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Routing/Router.php:842
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP  19. Illuminate\Routing\Route->signatureParameters() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Routing/Router.php:857
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP  20. ReflectionMethod->__construct() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Routing/Route.php:280
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP  21. spl_autoload_call() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Routing/Route.php:280
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP  22. Composer\Autoload\ClassLoader->loadClass() /home/ubuntu/workspace/Laravel_tutorial/vendor/laravel/framework/src/Illuminate/Routing/Route.php:280
+[26-Sep-2017 06:24:27 Asia/Tokyo] PHP  23. Composer\Autoload\includeFile() /home/ubuntu/workspace/Laravel_tutorial/vendor/composer/ClassLoader.php:322

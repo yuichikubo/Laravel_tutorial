@@ -11,8 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
+Route::get('/about', 'Static_page@about');
+Route::get('/contact', 'Static_page@contact');
+Route::get('/help', 'Static_page@help');
 Route::get('/', 'Static_page@home');
+Route::get('/signup', 'Users@signup');
+
