@@ -19,5 +19,10 @@ Route::get('/about', 'Static_page@about');
 Route::get('/contact', 'Static_page@contact');
 Route::get('/help', 'Static_page@help');
 Route::get('/', 'Static_page@home');
-Route::get('/signup', 'Users@signup');
+Route::post('/user/create', 'Users@store');
+Route::get('/user/create', 'Users@create');
+Route::get('/user/{id}', 'Users@show');
+
+// Route::resource('/user', 'Users');
+// Route::get('/user/{id}', 'Users@show');
 

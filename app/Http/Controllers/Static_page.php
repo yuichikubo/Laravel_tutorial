@@ -9,19 +9,19 @@ use App\Http\Requests;
 class Static_page extends Controller
 {
     function home(){
-    return view('home');
+    return view('static_pages.home');
 }
 
     function about(){
-    return view('about');
+    return view('static_pages.about');
 }
 
     function contact(){
-    return view('contact');
+    return view('static_pages.contact');
 }
 
     function help(){
-    return view('help');
+    return view('static_pages.help');
 }
     
 }
