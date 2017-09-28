@@ -22,7 +22,7 @@ class Users extends Controller
           $rules = [
           'name' => 'required|max:50',
           'email' => 'required|max:255|regex:/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i|unique:users',
-          'password_digest' => 'require|min:6',
+          'password' => 'required|min:6',
           ];
           
           if ($request->password !== $request->password_confirmation) {
@@ -37,8 +37,8 @@ class Users extends Controller
     		'email.max' => 'アドレスは255文字以内入力してください。',
     		'email.regex' => 'アドレスは正しい形式で入力してください。',
     		'email.unique' => 'そのアドレスは既に登録済です。',
-     		'password_digest.required' => 'パスワードを正しく入力してください。',
-    		'password_digest.min' => 'パスワードは6文字以上入力してください。',
+     		'password.required' => 'パスワードを正しく入力してください。',
+    		'password.min' => 'パスワードは6文字以上入力してください。',
     	    );
 
             $validator = Validator::make($request->all(), $rules, $messages);
@@ -48,7 +48,7 @@ class Users extends Controller
     		$user->name = $request->name;
     		$user->email = $request->email;
     		// パスワードハッシュ化
-     		$user->password_digest = Hash::make($request->password);
+     		$user->password = Hash::make($request->password);
     		$user->save();
     		return redirect()
 		    ->action('Users@show', $user->id)

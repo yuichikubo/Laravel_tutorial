@@ -19,8 +19,25 @@
           <ul class="nav navbar-nav navbar-right">
             <li>{{ link_to("/", 'HOME')}}</li>
             <li>{{ link_to("/help", 'HELP')}}</li>
-            <li>{{ link_to("#", 'Log in')}}</li>
+            @if (Auth::check())
+            <li>{{ link_to('#', "Users" )}}</li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>{{ link_to('#', "Profile")}}</li>
+              <li>{{ link_to('#', "Settings")}}</li>
+              <li class="divider"></li>
+              <li>
+                {{ link_to('/logout', "Log out")}}
+              </li>
+            </ul>
+            @else
+          </li>
+            <li>{{ link_to("/login", 'Log in')}}</li>
           </ul>
+          @endif
         </nav>
       </div>
     </header>

@@ -21,7 +21,12 @@ Route::get('/help', 'Static_page@help');
 Route::get('/', 'Static_page@home');
 Route::post('/user/create', 'Users@store');
 Route::get('/user/create', 'Users@create');
-Route::get('/user/{id}', 'Users@show');
+Route::get('/user/{id}', 'Users@show')->middleware('auth');
+Route::get('/login', 'SessionsController@login');
+Route::post('/login', 'SessionsController@dologin');
+Route::get('/logout', 'SessionsController@logout');
+
+
 
 // Route::resource('/user', 'Users');
 // Route::get('/user/{id}', 'Users@show');
