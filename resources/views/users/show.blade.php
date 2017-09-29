@@ -7,6 +7,9 @@
 		<p>{{ Session::get('message') }}</p>
 	</div>
   @endif
+  @foreach($errors->all() as $message)
+	<p class="bg-danger">{{ $message }}</p>
+@endforeach
   <aside class="col-md-4">
     <section class="user_info">
         <h1>

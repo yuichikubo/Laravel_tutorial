@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\User;
 use Validator;
 use Hash;
@@ -15,7 +16,12 @@ class Users extends Controller
     
     public function show($id){
         $user = User::findOrFail($id);
+        if(Auth::user()->id == $user->id){
         return view('users.show')->with('user', $user);
+        } else {
+        return Redirect::back()
+            			->withErrors("閲覧権限がありません。");
+        }
     }
     
     public function store(Request $request) {

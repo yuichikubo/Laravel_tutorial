@@ -38,14 +38,25 @@ class SessionsController extends Controller
     	    );
 
             $validator = Validator::make($credentials, $rules, $messages);
+            $remember = $request->remember_me;
 
             if ($validator->passes()) {
-        		if (Auth::attempt($credentials)) {
-        		    $user = User::where('email', $credentials['email'])->firstOrFail();
-        			return redirect()
-                        ->action('Users@show', $user->id);
+                if ($remember){
+            		if (Auth::attempt($credentials, $remember)){
+            		    $user = User::where('email', $credentials['email'])->firstOrFail();
+            			return redirect()
+                            ->action('Users@show', $user->id);
+            		}else{
+            			return Redirect::back()->withInput();
+            		}
         		}else{
-        			return Redirect::back()->withInput();
+            		if (Auth::attempt($credentials)){
+            		    $user = User::where('email', $credentials['email'])->firstOrFail();
+            			return redirect()
+                            ->action('Users@show', $user->id);
+            		}else{
+            			return Redirect::back()->withInput();
+            		}
         		}
         	}else{
         		return Redirect::back()
