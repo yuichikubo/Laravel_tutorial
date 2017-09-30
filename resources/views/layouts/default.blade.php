@@ -20,17 +20,17 @@
             <li>{{ link_to("/", 'HOME')}}</li>
             <li>{{ link_to("/help", 'HELP')}}</li>
             @if (Auth::check())
-            <li>{{ link_to('#', "Users" )}}</li>
+            <li>{{ link_to('/users', "Users" )}}</li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Account <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li>{{ link_to('#', "Profile")}}</li>
-              <li>{{ link_to('#', "Settings")}}</li>
+              <li>{{ link_to("/user/{$user->id}", "Profile")}}</li>
+              <li>{{ link_to("/user/{$user->id}/edit", "Settings")}}</li>
               <li class="divider"></li>
               <li>
-                {{ link_to('/logout', "Log out")}}
+                {{ link_to("/logout/{$user->id}", "Log out")}}
               </li>
             </ul>
             @else

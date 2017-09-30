@@ -66,7 +66,10 @@ class SessionsController extends Controller
                 
     }
     
-    public function logout(){
+    public function logout($id){
+        $user = User::findOrFail($id);
+        $user->remember_token = null;
+        $user->save();
         Auth::logout();
         return redirect('/');
     }

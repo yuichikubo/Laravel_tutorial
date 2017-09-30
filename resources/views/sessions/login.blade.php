@@ -22,9 +22,9 @@
             {!! Form::password('password', null, ['class' => 'form-control']) !!}
         </div>
         <div class="form-group">
-            {!! Form::label('remember_me', 'Remember me:', ['class' => 'checkbox inline']) !!}
-            {!! Form::checkbox('remember_me', null) !!}
-            <span>Remember me on this computer</span>
+            <!--{!! Form::label('remember_me', 'Remember me:', ['class' => 'checkbox inline']) !!}-->
+            {!! Form::checkbox('remember_me', null) !!}<span>Remember me on this computer</span>
+            
         </div>
         <div class="form-group">
             {!! Form::submit('Log in', ['class' => 'btn btn-primary form-control']) !!}

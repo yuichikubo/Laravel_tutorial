@@ -21,10 +21,14 @@ Route::get('/help', 'Static_page@help');
 Route::get('/', 'Static_page@home');
 Route::post('/user/create', 'Users@store');
 Route::get('/user/create', 'Users@create');
+Route::post('/user/{id}/edit', 'Users@update');
+Route::get('/user/{id}/edit', 'Users@edit')->middleware('auth');
 Route::get('/user/{id}', 'Users@show')->middleware('auth');
+Route::get('/users', 'Users@index');
+Route::delete('user/{id}', 'Users@destroy');
 Route::get('/login', 'SessionsController@login');
 Route::post('/login', 'SessionsController@dologin');
-Route::get('/logout', 'SessionsController@logout');
+Route::get('/logout/{id}', 'SessionsController@logout');
 
 
 
